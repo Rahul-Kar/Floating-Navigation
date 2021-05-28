@@ -1,0 +1,110 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background: rgba(5, 6, 59, 0.842);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+.navigation{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 8px;
+    z-index: 100;  
+    overflow: hidden;
+    transition: width 0.5s , height 0.5s;
+    transition-delay: 0s ,0.75s;
+}
+.toggler{
+    position: relative;
+    top: 0;
+    left: 0;
+    background: #ff4081;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: 0.5s;
+}
+.toggler::before{
+    position: absolute;
+    content: '+';
+    /* top: 0;
+    left: 0; */
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.navigation.active{
+    width: 290px;
+    height: 350px;
+    transition:  height 0.5s , width 0.5s ;
+    transition-delay: 0s ,0.75s;
+}
+.toggler.active{
+ background: #219cf3;
+}
+.toggler.active::before{
+    transform: rotate(315deg);
+}
+.navigation ul{
+
+    margin-top: 30px;
+    position: absolute;
+    /* left: 0; */
+    top: 50%;
+    width: 100%;
+}
+.navigation li{
+    list-style: none;
+    width: 100%;
+    position: relative;
+    padding-left: 6px;
+}
+.navigation li :hover{
+    background: #51b4e2;
+}
+.navigation li a{
+
+text-decoration: none;
+width: 100%;
+display: flex;
+color: #154367;
+font-weight: 500;
+padding-top: 10px;
+line-height: 1.5;
+}
+li:hover a{ 
+    color: white !important;
+}
+
+.navigation li a .icon{
+position: relative;
+display: block;
+min-width: 50px;
+height: 50px;
+text-align: center;
+}
+.title{
+    padding: 0 10px;
+    height: 50px;
+}
+i{
+    font-size: 24px !important;
+}
